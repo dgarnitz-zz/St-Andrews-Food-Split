@@ -8,4 +8,4 @@ def index():
 
 @app.route('/info')
 def info():
-    return '<p>This page provides info about my application</p>'
+    return '<p>Testing the git branching here</p>'
