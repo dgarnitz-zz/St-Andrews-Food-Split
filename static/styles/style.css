@@ -1,10 +1,9 @@
-#nav {
-  display: inline;
-  background-color: #1B74C3;
+.navbar-nav {
+  display: inline-block;
 }
 
 .new-order {
-  background-color: #1B74C3;
+  color: #1B74C3;
   /*color: #ee312a; */
   font-weight: bold;
 }
