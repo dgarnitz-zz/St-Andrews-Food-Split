@@ -1,0 +1,10 @@
+#nav {
+  display: inline;
+  background-color: #1B74C3;
+}
+
+.new-order {
+  background-color: #1B74C3;
+  /*color: #ee312a; */
+  font-weight: bold;
+}
