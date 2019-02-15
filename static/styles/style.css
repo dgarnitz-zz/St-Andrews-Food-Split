@@ -1,5 +1,7 @@
 .navbar-nav {
   display: inline-block;
+  list-style: none;
+  text-decoration: none;
 }
 
 .new-order {

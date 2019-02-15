@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}Food Split!{% endblock %}
 
@@ -16,6 +17,7 @@
   <p>This website is for St. Andrews students working in the CS labs and sciences libraries to split food orders.<br>
      It can be used for both pickup and delivery orders.</p>
 
+  <!--- DELETE THIS ONCE YOU CAN APPLY STYLING DIRECLTY TO THE FORM
   <h3>Please enter your order below</h3>
     <form class="new-order">
       Name:
@@ -33,6 +35,10 @@
         <option value="Pickup">Pickup</option>
       </select>
     </form>
+    --->
+    
+    {{ wtf.quick_form(form) }}
+
   </div>
 
 {% endblock %}

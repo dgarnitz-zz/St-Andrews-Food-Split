@@ -1,12 +1,23 @@
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField, SelectField
+from wtforms.validators import DataRequired
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'hard to guess string'
 bootstrap = Bootstrap(app)
+
+class OrderForm(FlaskForm):
+    name = StringField('Name:', validators=[DataRequired()])
+    email = StringField('St. Andrews Email Address:', validators=[DataRequired()])
+    type = SelectField('Type:', choices=[('delivery', 'Delivery'), ('pickup', 'Pick Up')], validators=[DataRequired()])
+    submit = SubmitField('Submit')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    order = OrderForm()
+    return render_template('index.html', form=order)
 
 @app.route('/info')
 def info():
